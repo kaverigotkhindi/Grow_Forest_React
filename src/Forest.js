@@ -2,20 +2,21 @@ import React, { Component } from 'react'
 import sprout from './components/sprout.png'
 import tree from './components/tree.png'
 
-export class Forest extends Component {
+class Forest extends Component {
  constructor (props){
-     super(props);
+     super(props)
 
-     this.state ={
+     this.state = {
          imageURL : sprout,
          text : 'this is sprout'
 
-     }
+     };
      
  }
- grow = () =>{
+ Grow = () =>{
      console.log('Clicked');
-    this.setState = ({
+
+    this.setState  ({
         imageURL : tree,
         text : 'this is tree'
     })
@@ -25,12 +26,12 @@ export class Forest extends Component {
     return (
       <div>
         <img 
-        style = {{width : '100px', height : '100px'}}
-        src={this.state.imageURL} 
-        onClick={this.grow}
+        style = {{width : '300px', height : '300px'}}
+        src = {this.state.imageURL} 
+        onClick = {this.Grow}
         alt='' 
         />
-        <h3>{this.state.text}</h3>
+        <h3 style={{fontSize : '50px'}}>{this.state.text}</h3>
       </div>
     )
   }

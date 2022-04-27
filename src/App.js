@@ -7,9 +7,7 @@ function App() {
   
   return (
     <div className='container'>
-  {/* <Header/> */}
-  {/* <Tasks/> */}
-  <Forest/>
+    <Forest/>
     </div>
   );
 }
